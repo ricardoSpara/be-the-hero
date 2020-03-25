@@ -1,10 +1,10 @@
 const { Router } = require("express");
 const routes = new Router();
 
-const OngController = require("./controllers/OngController");
-const IncidentController = require("./controllers/IncidentController");
-const ProfileController = require("./controllers/ProfileController");
-const SessionController = require("./controllers/SessionController");
+const OngController = require("./app/controllers/OngController");
+const IncidentController = require("./app/controllers/IncidentController");
+const ProfileController = require("./app/controllers/ProfileController");
+const SessionController = require("./app/controllers/SessionController");
 
 routes.post("/sessions", SessionController.create);
 
