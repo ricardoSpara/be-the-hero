@@ -5,7 +5,7 @@ import { FiPower, FiTrash2 } from "react-icons/fi";
 import api from "../../Services/api";
 import logoImg from "../../assets/logo.svg";
 
-import "./style.css";
+import "./styles.css";
 
 export default function Profile() {
   const [incidents, setIncidents] = useState([]);
