@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const { errors } = require("celebrate");
 
 const routes = require("./routes");
 
@@ -21,6 +22,7 @@ class App {
 
   routes() {
     this.server.use(routes);
+    this.server.use(errors());
   }
 }
 
