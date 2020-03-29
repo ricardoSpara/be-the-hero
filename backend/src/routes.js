@@ -7,7 +7,15 @@ const IncidentController = require("./app/controllers/IncidentController");
 const ProfileController = require("./app/controllers/ProfileController");
 const SessionController = require("./app/controllers/SessionController");
 
-routes.post("/sessions", SessionController.create);
+routes.post(
+  "/sessions",
+  celebrate({
+    [Segments.BODY]: Joi.object().keys({
+      id: Joi.string().required()
+    })
+  }),
+  SessionController.create
+);
 
 routes.get("/ongs", OngController.index);
 
